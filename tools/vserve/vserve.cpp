@@ -77,7 +77,14 @@ int main(int argc, char ** argv) {
         else if (a == "--chunk") chunk = atoi(nx().c_str());
     }
     llama_backend_init();
-    llama_log_set([](ggml_log_level lvl, const char * txt, void *) { if (lvl >= GGML_LOG_LEVEL_WARN) fputs(txt, stderr); }, nullptr);
+    // print warnings/errors, except known-harmless Gemma-4 vocab/cache notices emitted on every load
+    llama_log_set([](ggml_log_level lvl, const char * txt, void *) {
+        if (lvl < GGML_LOG_LEVEL_WARN) return;
+        static const char * benign[] = {"control-looking token", "is a normal token here, removing it from EOG list",
+                                        "using full-size SWA cache"};
+        for (const char * b : benign) if (strstr(txt, b)) return;
+        fputs(txt, stderr);
+    }, nullptr);
     auto mp = llama_model_default_params();
     mp.n_gpu_layers = ngl;
     llama_model * model = llama_model_load_from_file(model_path.c_str(), mp);

@@ -37,7 +37,8 @@ if [ ! -f "$LLAMA_DIR/include/llama.h" ]; then
 fi
 LLAMA_DIR=$(cd "$LLAMA_DIR" && pwd)
 if ! ls "$LLAMA_DIR/$BUILD/bin/"libllama.* >/dev/null 2>&1; then
-  need cmake
+  command -v cmake >/dev/null 2>&1 || { echo "error: cmake is required to build llama.cpp. Install it with" >&2
+    echo "  brew install cmake      (macOS, Homebrew)   or   python3 -m pip install cmake" >&2; exit 1; }
   FLAGS=(-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DLLAMA_CURL=OFF -DLLAMA_BUILD_TESTS=OFF -DGGML_METAL=OFF -DGGML_CUDA=OFF)
   if [ "$(uname)" = Darwin ]; then FLAGS+=(-DGGML_BLAS=ON -DGGML_BLAS_VENDOR=Apple -DGGML_CPU_KLEIDIAI=ON); fi
   cmake -S "$LLAMA_DIR" -B "$LLAMA_DIR/$BUILD" "${FLAGS[@]}"
