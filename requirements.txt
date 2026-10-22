@@ -1,2 +1,3 @@
 tokenizers>=0.20
 numpy>=1.26
+zstandard>=0.22; python_version < "3.14"   # only for the HTTP server (zstd request bodies)

@@ -63,4 +63,5 @@ fi
 
 echo "==> 5/5 smoke test (first load takes 1-2 min)"
 if [ -z "${SKIP_EXAMPLE:-}" ]; then "$PY" example.py; fi
-echo "done. Use it from Python:  from decido.predictor_llamacpp import DecidoLlamaCpp   (see example.py)"
+echo "done. Python: from decido.predictor_llamacpp import DecidoLlamaCpp (see example.py)"
+echo "      Jev-compatible API: $PY -m decido.server --port 8080   (then TYPESAFE_BASE_URL=http://127.0.0.1:8080)"
