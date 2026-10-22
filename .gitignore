@@ -1,0 +1,6 @@
+.venv-decido/
+third_party/
+__pycache__/
+*.gguf
+bundle/
+tools/vserve/vserve

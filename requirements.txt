@@ -1,0 +1,2 @@
+tokenizers>=0.20
+numpy>=1.26

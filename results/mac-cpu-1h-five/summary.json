@@ -1,0 +1,486 @@
+{
+ "predictor": "out.predictor_llamacpp:VerdictLlamaCpp",
+ "predictor_kw": {
+  "gguf": "out/verdict-gemma4-26b-a4b-q8_0.gguf",
+  "bundle": "out/bundle",
+  "threads": 10
+ },
+ "run_name": "mac-cpu-1h-five",
+ "started": "2026-10-21T21:25:58",
+ "limit_per_task": 50,
+ "threads": "default",
+ "env": {
+  "python": "3.12.15+meta",
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "cpu_count": 14,
+  "cpu": "Apple M4 Pro",
+  "perf_cores": "10"
+ },
+ "load_seconds": 62.535844833997544,
+ "suites": {
+  "jevbench": {
+   "coverage": {
+    "units": 231,
+    "missing": 0,
+    "invalid": 0
+   },
+   "score": 89.09693897051997,
+   "metric": "family-macro accuracy (18 families)",
+   "per_example_accuracy": 89.17748917748918,
+   "n": 231,
+   "per_task": {
+    "adequacy": 100.0,
+    "adversarial": 100.0,
+    "ambiguous": 85.71428571428571,
+    "extraction": 100.0,
+    "fact": 100.0,
+    "intent": 100.0,
+    "judge_hard": 88.23529411764706,
+    "long_policy": 73.68421052631578,
+    "multi_hop": 94.44444444444444,
+    "ordinal": 100.0,
+    "policy": 91.66666666666666,
+    "probability": 70.0,
+    "routing": 100.0,
+    "routing_hard": 100.0,
+    "temporal_numeric": 33.33333333333333,
+    "tool_selection": 100.0,
+    "tradeoff": 66.66666666666666,
+    "trap": 100.0
+   },
+   "ece10": 0.03416579717386685,
+   "ece_n": 231,
+   "brier": 0.16820038168179893
+  },
+  "kev": {
+   "coverage": {
+    "units": 329,
+    "missing": 0,
+    "invalid": 0
+   },
+   "per_task_ece": {
+    "decision-v7/development": 0.03404805275747405,
+    "decision-v7/test": 0.10013761693579816,
+    "transfer-v4/development": 0.033800624621935435,
+    "transfer-v4/test": 0.10529757028834416,
+    "transfer-v9/development": 0.09049736852813436,
+    "transfer-v9/test": 0.08023480315368892
+   },
+   "per_task_n": {
+    "decision-v7/development": 62,
+    "decision-v7/test": 47,
+    "transfer-v4/development": 42,
+    "transfer-v4/test": 43,
+    "transfer-v9/development": 43,
+    "transfer-v9/test": 39
+   },
+   "per_task_brier": {
+    "decision-v7/development": 0.11659187113069219,
+    "decision-v7/test": 0.24226493768458193,
+    "transfer-v4/development": 0.12573858160487944,
+    "transfer-v4/test": 0.16869558150012542,
+    "transfer-v9/development": 0.22953227695385242,
+    "transfer-v9/test": 0.24229873491558365
+   },
+   "score": 86.98594257324366,
+   "metric": "mean of 6 clean accuracies",
+   "per_task": {
+    "decision-v7/development": 91.93548387096774,
+    "decision-v7/test": 82.97872340425532,
+    "transfer-v4/development": 92.85714285714286,
+    "transfer-v4/test": 88.37209302325581,
+    "transfer-v9/development": 83.72093023255815,
+    "transfer-v9/test": 82.05128205128204
+   },
+   "n": 276,
+   "ece10": 0.043520081497045,
+   "ece_n": 276,
+   "brier": 0.1828609314634493
+  },
+  "nimble": {
+   "coverage": {
+    "units": 240,
+    "missing": 0,
+    "invalid": 0
+   },
+   "score": 89.32038834951457,
+   "metric": "per-example exact accuracy, NeoHorse 282 subset (reconstructed)",
+   "acc_324": 88.75,
+   "n": 206,
+   "per_task": {
+    "commerce": 92.0,
+    "education": 90.625,
+    "media": 85.0,
+    "public_services": 87.5,
+    "supply_chain": 87.5,
+    "travel": 100.0
+   },
+   "per_type": {
+    "choice": 89.41176470588236,
+    "noul": 95.34883720930233,
+    "score": 74.28571428571429
+   },
+   "ece10": 0.02959213515567571,
+   "ece_n": 206,
+   "brier": 0.18052129141065787
+  },
+  "vitaminc": {
+   "coverage": {
+    "units": 100,
+    "missing": 0,
+    "invalid": 0
+   },
+   "score": 84.0,
+   "metric": "accuracy",
+   "n": 100,
+   "ci95": [
+    75.57955544110557,
+    89.90479765052628
+   ],
+   "ece10": 0.05988028381865316,
+   "ece_n": 100,
+   "brier": 0.2091495994153179
+  },
+  "massive": {
+   "coverage": {
+    "units": 50,
+    "missing": 0,
+    "invalid": 0
+   },
+   "score": 92.0,
+   "metric": "accuracy",
+   "n": 50,
+   "ci95": [
+    81.1614974549363,
+    96.84509967442094
+   ],
+   "ece10": 0.056752939757342934,
+   "ece_n": 50,
+   "brier": 0.13072129069196317
+  }
+ },
+ "throughput": {
+  "jevbench": {
+   "requests": 231,
+   "seconds": 1088.8285117910127,
+   "req_per_s": 0.21215462076762517
+  },
+  "kev": {
+   "requests": 300,
+   "seconds": 365.1792457080155,
+   "req_per_s": 0.821514375545508
+  },
+  "nimble": {
+   "requests": 240,
+   "seconds": 666.4637082919944,
+   "req_per_s": 0.36010963089808634
+  },
+  "vitaminc": {
+   "requests": 100,
+   "seconds": 139.1321972500009,
+   "req_per_s": 0.7187408951812507
+  },
+  "massive": {
+   "requests": 50,
+   "seconds": 99.09103612499894,
+   "req_per_s": 0.5045865090857181
+  }
+ },
+ "errors": {
+  "jevbench": {
+   "count": 0,
+   "first": []
+  },
+  "kev": {
+   "count": 0,
+   "first": []
+  },
+  "nimble": {
+   "count": 0,
+   "first": []
+  },
+  "vitaminc": {
+   "count": 0,
+   "first": []
+  },
+  "massive": {
+   "count": 0,
+   "first": []
+  }
+ },
+ "data_manifest": {
+  "jevbench": {
+   "source": "github.com/fstandhartinger/jevbench datasets/public/{original,easy,hard}.jsonl",
+   "commit": "609a664e81f46e03731600bd7bd9f1b7a61257c5",
+   "license": "MIT",
+   "n_items": 231,
+   "families": 18,
+   "file": "eval/parity/data/jevbench.jsonl",
+   "sha256": "e1894a60155ba5523bee7a99d95f98ef95398b81ca627f402f0d4f207c73cc09",
+   "built_at": "2026-10-15T22:11:19",
+   "build_seconds": 0.0
+  },
+  "kev": {
+   "source": "github.com/jaredpalmer/kev evals/{v7/decision-v7,v4/transfer-v4,v9/transfer-v9}/{development,test}.jsonl",
+   "commit": "1f04cfa28e6a708485b28a9585010b9e436b776e",
+   "license": "Apache-2.0",
+   "records": {
+    "decision-v7/development": 1204,
+    "decision-v7/test": 1176,
+    "transfer-v4/development": 764,
+    "transfer-v4/test": 764,
+    "transfer-v9/development": 1264,
+    "transfer-v9/test": 1264
+   },
+   "n_items": 6436,
+   "file": "eval/parity/data/kev.jsonl",
+   "sha256": "3336274541edcbcae09fc68fd3430e4e77e0fdeac575da073cda410b138b3630",
+   "built_at": "2026-10-15T22:11:19",
+   "build_seconds": 0.1
+  },
+  "nimble": {
+   "source": "github.com/bespokelabsai/nimble data/eval.jsonl (324-record frozen holdout)",
+   "commit": "4edb0703a2e75d0170c3a45645a1961f4d1a2867",
+   "sha256": "28614c560129de7017934837ba208954897762249c77987019a2721e08da4a9c",
+   "license": "no LICENSE file in repo (all rights reserved by default); model card is Apache-2.0. Internal evaluation only.",
+   "n_items": 324,
+   "n_282": 282,
+   "composition_282": {
+    "choice": 116,
+    "noul": 112,
+    "score": 54
+   },
+   "selection_note": "282 reconstructed (see NIMBLE_EXTRA_KEEP); composition matches NeoHorse exactly, ids unverifiable",
+   "file": "eval/parity/data/nimble.jsonl",
+   "built_at": "2026-10-15T22:11:19",
+   "build_seconds": 0.4
+  },
+  "vitaminc": {
+   "source": "VitaminC dev (talschuster.github.io/static/vitaminc.zip), ids from bespokelabsai/nimble vitaminc-dev-manifest.json",
+   "license": "CC BY-SA 3.0",
+   "n_items": 599,
+   "dataset_sha256": "6144a345cb8846b6594f07a0037b1221b2d9633b20d8a9bfd14f9111d15965bc",
+   "byte_identical_to_nimble_subset": true,
+   "expected_sha256": "6144a345cb8846b6594f07a0037b1221b2d9633b20d8a9bfd14f9111d15965bc",
+   "file": "eval/parity/data/vitaminc.jsonl",
+   "sha256": "a92e69281b4f0188ddfb32afd4078669e5ddfa01a250ead266fe58f121784794",
+   "built_at": "2026-10-15T22:11:19",
+   "build_seconds": 0.3
+  },
+  "massive": {
+   "source": "MASSIVE 1.1 test en-US (amazon-massive-dataset-1.1.tar.gz), ids from bespokelabsai/nimble massive-en-US-manifest.json",
+   "license": "CC BY 4.0",
+   "n_items": 350,
+   "dataset_sha256": "f173a34108c1f785f5e5bf1d83534c34393651e7f7b0b2eba19deb0d5d0f2681",
+   "byte_identical_to_nimble_subset": true,
+   "expected_sha256": "f173a34108c1f785f5e5bf1d83534c34393651e7f7b0b2eba19deb0d5d0f2681",
+   "file": "eval/parity/data/massive.jsonl",
+   "sha256": "ad3595a43ba6edbea65bd217ed8a6a88ad75afcd0c9a45d368cccd3c4ed7b466",
+   "built_at": "2026-10-15T22:11:20",
+   "build_seconds": 0.4
+  },
+  "openjev": {
+   "source": "AlexWortega/openjev code/eval.py (MIT) task definitions; data from HF Hub / GPQA GitHub zip",
+   "revision": "a20448012c213128955ca0c693e7c943865cab77",
+   "counts": {
+    "mnli": 19647,
+    "anli_r1": 1000,
+    "anli_r2": 1000,
+    "anli_r3": 1200,
+    "wanli": 5000,
+    "scitail": 2126,
+    "control": 805,
+    "arc_easy": 2376,
+    "arc_challenge": 1172,
+    "winogrande": 1267,
+    "gsm8k_mc4": 1319,
+    "gsm8k_mc10": 1319,
+    "gpqa": 198,
+    "gpqa_fewshot": 198,
+    "chess": 500,
+    "hellaswag": 10042,
+    "mmlu": 14042,
+    "mmlu_fewshot": 14042,
+    "gsm8k_rerank4": 0
+   },
+   "missing": [
+    "gsm8k_rerank4"
+   ],
+   "n_items": 77253,
+   "n_requests": 222054,
+   "expected_counts_neohorse": {
+    "scitail": 2126,
+    "anli_r1": 1000,
+    "anli_r2": 1000,
+    "anli_r3": 1200,
+    "wanli": 5000,
+    "control": 805,
+    "mnli": 19647,
+    "arc_easy": 2376,
+    "arc_challenge": 1172,
+    "winogrande": 1267,
+    "gsm8k_mc4": 1319,
+    "gsm8k_mc10": 1319,
+    "gpqa": 198,
+    "gpqa_fewshot": 198,
+    "chess": 500,
+    "hellaswag": 10042,
+    "mmlu": 14042,
+    "mmlu_fewshot": 14042,
+    "gsm8k_rerank4": 200
+   },
+   "file": "eval/parity/data/openjev.jsonl",
+   "sha256": "2c9c44a16e2bec9b1836ad921c77e5ac298e850485b1781e4c198e5c532aa8b7",
+   "built_at": "2026-10-15T22:12:27",
+   "build_seconds": 60.9
+  },
+  "arxiv": {
+   "source": "jev-benchmarking (MIT) task classes, eval split, HF datasets",
+   "commit": "87562114d23597f610754f057e5e0da8659dbcfb",
+   "tasks": {
+    "anli": 3200,
+    "boolq": 3270,
+    "paws": 8000,
+    "winogrande": 1267,
+    "arc": 3548,
+    "hellaswag": 10042,
+    "ag_news": 7600,
+    "sst2": 872,
+    "rotten_tomatoes": 1066,
+    "banking77": 3076
+   },
+   "n_items": 41941,
+   "paper": "arXiv 2609.37647",
+   "responses": "zenodo 10.5281/zenodo.23039006 responses.db (Jev Responses License 1.0)",
+   "file": "eval/parity/data/arxiv.jsonl",
+   "sha256": "cd40f1fe8460f4e18894f71c0aad893d590bd9842221ca606189fb952b6ea376",
+   "built_at": "2026-10-15T22:13:12",
+   "build_seconds": 25.6
+  }
+ },
+ "determinism": {
+  "requests": 20,
+  "share_changed_gt_1e-6": 0.0,
+  "share_argmax_changed": 0.0,
+  "max_abs_dp": 0.0
+ },
+ "parity": {
+  "per_group": {
+   "jevbench": {
+    "verdict": 89.09693897051997,
+    "jev_1.13": 87.18,
+    "delta": 1.9169389705199649
+   },
+   "kev": {
+    "verdict": 86.98594257324366,
+    "jev_1.13": 85.52,
+    "delta": 1.465942573243666
+   },
+   "openjev": {
+    "verdict": null,
+    "jev_1.13": 72.96,
+    "delta": null
+   },
+   "nimble": {
+    "verdict": 89.32038834951457,
+    "jev_1.13": 91.84,
+    "delta": -2.5196116504854302
+   },
+   "vitaminc": {
+    "verdict": 84.0,
+    "jev_1.13": 78.46,
+    "delta": 5.540000000000006
+   },
+   "massive": {
+    "verdict": 92.0,
+    "jev_1.13": 87.14,
+    "delta": 4.859999999999999
+   }
+  },
+  "six_group_mean": null,
+  "note": "only 5/6 groups scored",
+  "ece_checks": {
+   "jevbench": {
+    "verdict": 0.03416579717386685,
+    "jev": 0.0318,
+    "ok": false,
+    "src": "Open-Jev hosted run of jev-1.13.0 on the same 231 items (reports/jevbench-public-20260921)"
+   },
+   "kev:transfer-v4/development": {
+    "verdict": 0.033800624621935435,
+    "jev": 0.0492,
+    "ok": true,
+    "src": "Kev repo runs/jev-transfer-v4/report.json"
+   },
+   "kev:transfer-v9/development": {
+    "verdict": 0.09049736852813436,
+    "jev": 0.0335,
+    "ok": false,
+    "src": "Kev repo runs/jev-transfer-v9/report.json"
+   },
+   "vitaminc": {
+    "verdict": 0.05988028381865316,
+    "jev": 0.104,
+    "ok": true,
+    "src": "Bespoke Nimble PUBLIC_BENCHMARKS.md, jev-1.13.0 on the same 599 ids"
+   },
+   "massive": {
+    "verdict": 0.056752939757342934,
+    "jev": 0.075,
+    "ok": true,
+    "src": "Bespoke Nimble PUBLIC_BENCHMARKS.md, jev-1.13.0 on the same 350 ids"
+   }
+  },
+  "ece_parity": false,
+  "brier_checks": {
+   "jevbench": {
+    "verdict": 0.16820038168179893,
+    "jev": 0.1811,
+    "ok": true,
+    "src": "Open-Jev hosted run, brier_mean"
+   },
+   "kev:transfer-v4/development": {
+    "verdict": 0.12573858160487944,
+    "jev": 0.211,
+    "ok": true,
+    "src": "Kev runs/jev-transfer-v4"
+   },
+   "kev:transfer-v9/development": {
+    "verdict": 0.22953227695385242,
+    "jev": 0.2121,
+    "ok": false,
+    "src": "Kev runs/jev-transfer-v9"
+   },
+   "vitaminc": {
+    "verdict": 0.2091495994153179,
+    "jev": 0.313,
+    "ok": true,
+    "src": "Bespoke Nimble public suite"
+   },
+   "massive": {
+    "verdict": 0.13072129069196317,
+    "jev": 0.204,
+    "ok": true,
+    "src": "Bespoke Nimble public suite"
+   }
+  },
+  "brier_parity": false
+ },
+ "device_audit": {
+  "CUDA_VISIBLE_DEVICES": "",
+  "torch": {
+   "version": "2.14.1",
+   "threads": 10,
+   "mps_allocated_bytes": 0,
+   "mps_peak_sampled_bytes": 0
+  },
+  "mlx": {
+   "default_device": "Device(cpu, 0)"
+  },
+  "violations": [],
+  "device": "CPU-only",
+  "cpu_only": true
+ },
+ "finished": "2026-10-21T22:07:03"
+}

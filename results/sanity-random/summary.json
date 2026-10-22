@@ -1,0 +1,627 @@
+{
+ "predictor": "eval.parity.predictors:random_predictor",
+ "predictor_kw": {},
+ "run_name": "sanity-random",
+ "started": "2026-10-15T22:33:29",
+ "limit_per_task": null,
+ "threads": "default",
+ "env": {
+  "python": "3.12.15+meta",
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "cpu_count": 14,
+  "cpu": "Apple M4 Pro",
+  "perf_cores": "10"
+ },
+ "load_seconds": 0.0034855830017477274,
+ "suites": {
+  "jevbench": {
+   "coverage": {
+    "units": 231,
+    "missing": 0,
+    "invalid": 0
+   },
+   "score": 39.501913825959235,
+   "metric": "family-macro accuracy (18 families)",
+   "per_example_accuracy": 37.22943722943723,
+   "n": 231,
+   "per_task": {
+    "adequacy": 41.66666666666667,
+    "adversarial": 33.33333333333333,
+    "ambiguous": 28.57142857142857,
+    "extraction": 37.5,
+    "fact": 41.66666666666667,
+    "intent": 8.333333333333332,
+    "judge_hard": 41.17647058823529,
+    "long_policy": 36.84210526315789,
+    "multi_hop": 27.77777777777778,
+    "ordinal": 58.333333333333336,
+    "policy": 66.66666666666666,
+    "probability": 50.0,
+    "routing": 8.333333333333332,
+    "routing_hard": 40.0,
+    "temporal_numeric": 53.333333333333336,
+    "tool_selection": 25.0,
+    "tradeoff": 50.0,
+    "trap": 62.5
+   },
+   "ece10": 0.20971555095375702,
+   "ece_n": 231,
+   "brier": 0.7882068104961011
+  },
+  "kev": {
+   "coverage": {
+    "units": 6964,
+    "missing": 0,
+    "invalid": 0
+   },
+   "per_task_ece": {
+    "decision-v7/development": 0.24600274207668385,
+    "decision-v7/test": 0.2244400069078549,
+    "transfer-v4/development": 0.26002788699109075,
+    "transfer-v4/test": 0.24635642645219516,
+    "transfer-v9/development": 0.25552055411921454,
+    "transfer-v9/test": 0.2364734325828252
+   },
+   "per_task_n": {
+    "decision-v7/development": 1264,
+    "decision-v7/test": 1200,
+    "transfer-v4/development": 656,
+    "transfer-v4/test": 656,
+    "transfer-v9/development": 1046,
+    "transfer-v9/test": 1046
+   },
+   "per_task_brier": {
+    "decision-v7/development": 0.82284429375657,
+    "decision-v7/test": 0.8143155151479391,
+    "transfer-v4/development": 0.7692749923857982,
+    "transfer-v4/test": 0.7584576130748163,
+    "transfer-v9/development": 0.8151425305544943,
+    "transfer-v9/test": 0.8038635450662376
+   },
+   "score": 35.47011061543924,
+   "metric": "mean of 6 clean accuracies",
+   "per_task": {
+    "decision-v7/development": 32.357594936708864,
+    "decision-v7/test": 32.916666666666664,
+    "transfer-v4/development": 39.176829268292686,
+    "transfer-v4/test": 40.396341463414636,
+    "transfer-v9/development": 33.07839388145315,
+    "transfer-v9/test": 34.894837476099426
+   },
+   "n": 5868,
+   "ece10": 0.2431110962082939,
+   "ece_n": 5868,
+   "brier": 0.8031572511532517
+  },
+  "openjev": {
+   "coverage": {
+    "units": 77253,
+    "missing": 0,
+    "invalid": 0
+   },
+   "mnli_matched": 33.07182883341824,
+   "mnli_mismatched": 33.37062652563059,
+   "score_19_bounds_if_gsm8k_rerank_in_[89.5,95.0]": [
+    33.33843391894431,
+    33.62790760315484
+   ],
+   "score": 30.21834691444122,
+   "metric": "mean of 18 task accuracies (published group uses 19; MNLI m/mm averaged first)",
+   "n_tasks": 18,
+   "per_task": {
+    "anli_r1": 31.7,
+    "anli_r2": 33.7,
+    "anli_r3": 33.166666666666664,
+    "arc_challenge": 25.170648464163826,
+    "arc_easy": 25.336700336700336,
+    "chess": 26.400000000000002,
+    "control": 35.52795031055901,
+    "gpqa": 24.242424242424242,
+    "gpqa_fewshot": 27.77777777777778,
+    "gsm8k_mc10": 10.841546626231995,
+    "gsm8k_mc4": 25.322213798332072,
+    "hellaswag": 25.144393547102172,
+    "mmlu": 25.08901865831078,
+    "mmlu_fewshot": 25.096140150975643,
+    "mnli": 33.22122767952441,
+    "scitail": 53.43367826904986,
+    "wanli": 34.22,
+    "winogrande": 48.53985793212313
+   },
+   "n": 77253,
+   "ece10": 0.2725867338355324,
+   "ece_n": 30778,
+   "brier": 0.8145171557136168
+  },
+  "nimble": {
+   "coverage": {
+    "units": 324,
+    "missing": 0,
+    "invalid": 0
+   },
+   "score": 35.46099290780142,
+   "metric": "per-example exact accuracy, NeoHorse 282 subset (reconstructed)",
+   "acc_324": 35.80246913580247,
+   "n": 282,
+   "per_task": {
+    "commerce": 41.37931034482759,
+    "education": 34.78260869565217,
+    "media": 20.0,
+    "public_services": 37.254901960784316,
+    "supply_chain": 50.0,
+    "travel": 16.666666666666664
+   },
+   "per_type": {
+    "choice": 31.03448275862069,
+    "noul": 48.214285714285715,
+    "score": 18.51851851851852
+   },
+   "ece10": 0.2656299547694743,
+   "ece_n": 282,
+   "brier": 0.7989241700464222
+  },
+  "vitaminc": {
+   "coverage": {
+    "units": 599,
+    "missing": 0,
+    "invalid": 0
+   },
+   "score": 36.56093489148581,
+   "metric": "accuracy",
+   "n": 599,
+   "ci95": [
+    32.80110696029036,
+    40.49204334652323
+   ],
+   "ece10": 0.24582624679788195,
+   "ece_n": 599,
+   "brier": 0.8043573194078047
+  },
+  "massive": {
+   "coverage": {
+    "units": 350,
+    "missing": 0,
+    "invalid": 0
+   },
+   "score": 7.428571428571429,
+   "metric": "accuracy",
+   "n": 350,
+   "ci95": [
+    5.119557238086494,
+    10.661967602407103
+   ],
+   "ece10": 0.11678381360419002,
+   "ece_n": 350,
+   "brier": 0.980926615977744
+  }
+ },
+ "throughput": {
+  "jevbench": {
+   "requests": 231,
+   "seconds": 0.029574208001577063,
+   "req_per_s": 7810.860057103872
+  },
+  "kev": {
+   "requests": 6436,
+   "seconds": 0.10093991699977778,
+   "req_per_s": 63760.702319719254
+  },
+  "openjev": {
+   "requests": 222054,
+   "seconds": 3.7137140419981733,
+   "req_per_s": 59792.972072917946
+  },
+  "nimble": {
+   "requests": 324,
+   "seconds": 0.007058417002554052,
+   "req_per_s": 45902.64359314026
+  },
+  "vitaminc": {
+   "requests": 599,
+   "seconds": 0.008960541999840643,
+   "req_per_s": 66848.63482707327
+  },
+  "massive": {
+   "requests": 350,
+   "seconds": 0.0060249579983064905,
+   "req_per_s": 58091.69127791079
+  }
+ },
+ "errors": {
+  "jevbench": {
+   "count": 0,
+   "first": []
+  },
+  "kev": {
+   "count": 0,
+   "first": []
+  },
+  "openjev": {
+   "count": 0,
+   "first": []
+  },
+  "nimble": {
+   "count": 0,
+   "first": []
+  },
+  "vitaminc": {
+   "count": 0,
+   "first": []
+  },
+  "massive": {
+   "count": 0,
+   "first": []
+  }
+ },
+ "data_manifest": {
+  "jevbench": {
+   "source": "github.com/fstandhartinger/jevbench datasets/public/{original,easy,hard}.jsonl",
+   "commit": "609a664e81f46e03731600bd7bd9f1b7a61257c5",
+   "license": "MIT",
+   "n_items": 231,
+   "families": 18,
+   "file": "eval/parity/data/jevbench.jsonl",
+   "sha256": "e1894a60155ba5523bee7a99d95f98ef95398b81ca627f402f0d4f207c73cc09",
+   "built_at": "2026-10-15T22:11:19",
+   "build_seconds": 0.0
+  },
+  "kev": {
+   "source": "github.com/jaredpalmer/kev evals/{v7/decision-v7,v4/transfer-v4,v9/transfer-v9}/{development,test}.jsonl",
+   "commit": "1f04cfa28e6a708485b28a9585010b9e436b776e",
+   "license": "Apache-2.0",
+   "records": {
+    "decision-v7/development": 1204,
+    "decision-v7/test": 1176,
+    "transfer-v4/development": 764,
+    "transfer-v4/test": 764,
+    "transfer-v9/development": 1264,
+    "transfer-v9/test": 1264
+   },
+   "n_items": 6436,
+   "file": "eval/parity/data/kev.jsonl",
+   "sha256": "3336274541edcbcae09fc68fd3430e4e77e0fdeac575da073cda410b138b3630",
+   "built_at": "2026-10-15T22:11:19",
+   "build_seconds": 0.1
+  },
+  "nimble": {
+   "source": "github.com/bespokelabsai/nimble data/eval.jsonl (324-record frozen holdout)",
+   "commit": "4edb0703a2e75d0170c3a45645a1961f4d1a2867",
+   "sha256": "28614c560129de7017934837ba208954897762249c77987019a2721e08da4a9c",
+   "license": "no LICENSE file in repo (all rights reserved by default); model card is Apache-2.0. Internal evaluation only.",
+   "n_items": 324,
+   "n_282": 282,
+   "composition_282": {
+    "choice": 116,
+    "noul": 112,
+    "score": 54
+   },
+   "selection_note": "282 reconstructed (see NIMBLE_EXTRA_KEEP); composition matches NeoHorse exactly, ids unverifiable",
+   "file": "eval/parity/data/nimble.jsonl",
+   "built_at": "2026-10-15T22:11:19",
+   "build_seconds": 0.4
+  },
+  "vitaminc": {
+   "source": "VitaminC dev (talschuster.github.io/static/vitaminc.zip), ids from bespokelabsai/nimble vitaminc-dev-manifest.json",
+   "license": "CC BY-SA 3.0",
+   "n_items": 599,
+   "dataset_sha256": "6144a345cb8846b6594f07a0037b1221b2d9633b20d8a9bfd14f9111d15965bc",
+   "byte_identical_to_nimble_subset": true,
+   "expected_sha256": "6144a345cb8846b6594f07a0037b1221b2d9633b20d8a9bfd14f9111d15965bc",
+   "file": "eval/parity/data/vitaminc.jsonl",
+   "sha256": "a92e69281b4f0188ddfb32afd4078669e5ddfa01a250ead266fe58f121784794",
+   "built_at": "2026-10-15T22:11:19",
+   "build_seconds": 0.3
+  },
+  "massive": {
+   "source": "MASSIVE 1.1 test en-US (amazon-massive-dataset-1.1.tar.gz), ids from bespokelabsai/nimble massive-en-US-manifest.json",
+   "license": "CC BY 4.0",
+   "n_items": 350,
+   "dataset_sha256": "f173a34108c1f785f5e5bf1d83534c34393651e7f7b0b2eba19deb0d5d0f2681",
+   "byte_identical_to_nimble_subset": true,
+   "expected_sha256": "f173a34108c1f785f5e5bf1d83534c34393651e7f7b0b2eba19deb0d5d0f2681",
+   "file": "eval/parity/data/massive.jsonl",
+   "sha256": "ad3595a43ba6edbea65bd217ed8a6a88ad75afcd0c9a45d368cccd3c4ed7b466",
+   "built_at": "2026-10-15T22:11:20",
+   "build_seconds": 0.4
+  },
+  "openjev": {
+   "source": "AlexWortega/openjev code/eval.py (MIT) task definitions; data from HF Hub / GPQA GitHub zip",
+   "revision": "a20448012c213128955ca0c693e7c943865cab77",
+   "counts": {
+    "mnli": 19647,
+    "anli_r1": 1000,
+    "anli_r2": 1000,
+    "anli_r3": 1200,
+    "wanli": 5000,
+    "scitail": 2126,
+    "control": 805,
+    "arc_easy": 2376,
+    "arc_challenge": 1172,
+    "winogrande": 1267,
+    "gsm8k_mc4": 1319,
+    "gsm8k_mc10": 1319,
+    "gpqa": 198,
+    "gpqa_fewshot": 198,
+    "chess": 500,
+    "hellaswag": 10042,
+    "mmlu": 14042,
+    "mmlu_fewshot": 14042,
+    "gsm8k_rerank4": 0
+   },
+   "missing": [
+    "gsm8k_rerank4"
+   ],
+   "n_items": 77253,
+   "n_requests": 222054,
+   "expected_counts_neohorse": {
+    "scitail": 2126,
+    "anli_r1": 1000,
+    "anli_r2": 1000,
+    "anli_r3": 1200,
+    "wanli": 5000,
+    "control": 805,
+    "mnli": 19647,
+    "arc_easy": 2376,
+    "arc_challenge": 1172,
+    "winogrande": 1267,
+    "gsm8k_mc4": 1319,
+    "gsm8k_mc10": 1319,
+    "gpqa": 198,
+    "gpqa_fewshot": 198,
+    "chess": 500,
+    "hellaswag": 10042,
+    "mmlu": 14042,
+    "mmlu_fewshot": 14042,
+    "gsm8k_rerank4": 200
+   },
+   "file": "eval/parity/data/openjev.jsonl",
+   "sha256": "2c9c44a16e2bec9b1836ad921c77e5ac298e850485b1781e4c198e5c532aa8b7",
+   "built_at": "2026-10-15T22:12:27",
+   "build_seconds": 60.9
+  },
+  "arxiv": {
+   "source": "jev-benchmarking (MIT) task classes, eval split, HF datasets",
+   "commit": "87562114d23597f610754f057e5e0da8659dbcfb",
+   "tasks": {
+    "anli": 3200,
+    "boolq": 3270,
+    "paws": 8000,
+    "winogrande": 1267,
+    "arc": 3548,
+    "hellaswag": 10042,
+    "ag_news": 7600,
+    "sst2": 872,
+    "rotten_tomatoes": 1066,
+    "banking77": 3076
+   },
+   "n_items": 41941,
+   "paper": "arXiv 2609.37647",
+   "responses": "zenodo 10.5281/zenodo.23039006 responses.db (Jev Responses License 1.0)",
+   "file": "eval/parity/data/arxiv.jsonl",
+   "sha256": "cd40f1fe8460f4e18894f71c0aad893d590bd9842221ca606189fb952b6ea376",
+   "built_at": "2026-10-15T22:13:12",
+   "build_seconds": 25.6
+  }
+ },
+ "permutation": {
+  "per_suite": {
+   "jevbench": {
+    "targets": 139,
+    "permutations_per_target": 3,
+    "trials": 417,
+    "flip_rate": 0.8201438848920863,
+    "share_targets_any_flip": 0.9928057553956835,
+    "mean_tv": 0.392326022787437,
+    "errors": 0
+   },
+   "kev": {
+    "targets": 200,
+    "permutations_per_target": 3,
+    "trials": 600,
+    "flip_rate": 0.8616666666666667,
+    "share_targets_any_flip": 1.0,
+    "mean_tv": 0.4302005491684368,
+    "errors": 0
+   },
+   "openjev": {
+    "targets": 200,
+    "permutations_per_target": 3,
+    "trials": 600,
+    "flip_rate": 0.8183333333333334,
+    "share_targets_any_flip": 0.995,
+    "mean_tv": 0.41263099614894355,
+    "errors": 0
+   },
+   "nimble": {
+    "targets": 146,
+    "permutations_per_target": 3,
+    "trials": 438,
+    "flip_rate": 0.7785388127853882,
+    "share_targets_any_flip": 1.0,
+    "mean_tv": 0.4110903009661065,
+    "errors": 0
+   },
+   "vitaminc": {
+    "targets": 200,
+    "permutations_per_target": 3,
+    "trials": 600,
+    "flip_rate": 0.8,
+    "share_targets_any_flip": 0.985,
+    "mean_tv": 0.4097042338308039,
+    "errors": 0
+   },
+   "massive": {
+    "targets": 200,
+    "permutations_per_target": 3,
+    "trials": 600,
+    "flip_rate": 0.945,
+    "share_targets_any_flip": 1.0,
+    "mean_tv": 0.470397445440477,
+    "errors": 0
+   }
+  },
+  "pooled_flip_rate": 0.8411674347158218,
+  "pooled_trials": 3255
+ },
+ "determinism": {
+  "requests": 100,
+  "share_changed_gt_1e-6": 0.0,
+  "share_argmax_changed": 0.0,
+  "max_abs_dp": 0.0
+ },
+ "parity": {
+  "per_group": {
+   "jevbench": {
+    "verdict": 39.501913825959235,
+    "jev_1.13": 87.18,
+    "delta": -47.67808617404077
+   },
+   "kev": {
+    "verdict": 35.47011061543924,
+    "jev_1.13": 85.52,
+    "delta": -50.04988938456076
+   },
+   "openjev": {
+    "verdict": 30.21834691444122,
+    "jev_1.13": 72.96,
+    "delta": -42.741653085558774
+   },
+   "nimble": {
+    "verdict": 35.46099290780142,
+    "jev_1.13": 91.84,
+    "delta": -56.379007092198584
+   },
+   "vitaminc": {
+    "verdict": 36.56093489148581,
+    "jev_1.13": 78.46,
+    "delta": -41.899065108514186
+   },
+   "massive": {
+    "verdict": 7.428571428571429,
+    "jev_1.13": 87.14,
+    "delta": -79.71142857142857
+   }
+  },
+  "six_group_mean": 30.77347843061639,
+  "jev_six_group_mean": 83.85,
+  "gap": -53.0765215693836,
+  "accuracy_parity": false,
+  "note_openjev": "OpenJev scored on the 18 obtainable tasks (GSM8K rerank pool unpublished): conservative",
+  "six_group_mean_if_openjev19_bounds": [
+   31.293492931366906,
+   31.34173854540199
+  ],
+  "ece_checks": {
+   "jevbench": {
+    "verdict": 0.20971555095375702,
+    "jev": 0.0318,
+    "ok": false,
+    "src": "Open-Jev hosted run of jev-1.13.0 on the same 231 items (reports/jevbench-public-20260921)"
+   },
+   "kev:transfer-v4/development": {
+    "verdict": 0.26002788699109075,
+    "jev": 0.0492,
+    "ok": false,
+    "src": "Kev repo runs/jev-transfer-v4/report.json"
+   },
+   "kev:transfer-v9/development": {
+    "verdict": 0.25552055411921454,
+    "jev": 0.0335,
+    "ok": false,
+    "src": "Kev repo runs/jev-transfer-v9/report.json"
+   },
+   "vitaminc": {
+    "verdict": 0.24582624679788195,
+    "jev": 0.104,
+    "ok": false,
+    "src": "Bespoke Nimble PUBLIC_BENCHMARKS.md, jev-1.13.0 on the same 599 ids"
+   },
+   "massive": {
+    "verdict": 0.11678381360419002,
+    "jev": 0.075,
+    "ok": false,
+    "src": "Bespoke Nimble PUBLIC_BENCHMARKS.md, jev-1.13.0 on the same 350 ids"
+   }
+  },
+  "ece_parity": false,
+  "brier_checks": {
+   "jevbench": {
+    "verdict": 0.7882068104961011,
+    "jev": 0.1811,
+    "ok": false,
+    "src": "Open-Jev hosted run, brier_mean"
+   },
+   "kev:transfer-v4/development": {
+    "verdict": 0.7692749923857982,
+    "jev": 0.211,
+    "ok": false,
+    "src": "Kev runs/jev-transfer-v4"
+   },
+   "kev:transfer-v9/development": {
+    "verdict": 0.8151425305544943,
+    "jev": 0.2121,
+    "ok": false,
+    "src": "Kev runs/jev-transfer-v9"
+   },
+   "vitaminc": {
+    "verdict": 0.8043573194078047,
+    "jev": 0.313,
+    "ok": false,
+    "src": "Bespoke Nimble public suite"
+   },
+   "massive": {
+    "verdict": 0.980926615977744,
+    "jev": 0.204,
+    "ok": false,
+    "src": "Bespoke Nimble public suite"
+   }
+  },
+  "brier_parity": false,
+  "bootstrap95": {
+   "jevbench": [
+    33.375007678509995,
+    46.2324614299911
+   ],
+   "kev": [
+    34.19667326845095,
+    36.79877652630796
+   ],
+   "openjev": [
+    29.53082651215257,
+    30.90026399220935
+   ],
+   "nimble": [
+    30.141843971631204,
+    40.42553191489361
+   ],
+   "vitaminc": [
+    32.63355592654424,
+    40.06677796327212
+   ],
+   "massive": [
+    4.571428571428571,
+    10.285714285714285
+   ],
+   "six_group_mean": [
+    29.117655703975323,
+    32.57319779115484
+   ],
+   "p_mean_ge_jev": 0.0,
+   "B": 500
+  }
+ },
+ "device_audit": {
+  "CUDA_VISIBLE_DEVICES": "",
+  "torch": {
+   "version": "2.14.1",
+   "threads": 10,
+   "mps_allocated_bytes": 0,
+   "mps_peak_sampled_bytes": 0
+  },
+  "mlx": null,
+  "violations": [],
+  "cpu_only": true
+ },
+ "finished": "2026-10-15T22:33:36"
+}

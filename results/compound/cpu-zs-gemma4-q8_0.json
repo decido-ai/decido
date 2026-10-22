@@ -1,0 +1,41 @@
+{
+ "n": 600,
+ "compound_acc": 0.9066666666666666,
+ "split_acc": 0.9666666666666667,
+ "atom_acc": 0.9708491761723701,
+ "atoms": 1578,
+ "by_op": {
+  "all": {
+   "n": 79,
+   "compound": 0.9746835443037974,
+   "split": 0.9746835443037974
+  },
+  "exactly_one": {
+   "n": 133,
+   "compound": 0.7969924812030075,
+   "split": 0.9473684210526315
+  },
+  "any": {
+   "n": 144,
+   "compound": 0.9583333333333334,
+   "split": 0.9861111111111112
+  },
+  "none": {
+   "n": 115,
+   "compound": 0.8869565217391304,
+   "split": 0.9826086956521739
+  },
+  "but_not": {
+   "n": 129,
+   "compound": 0.937984496124031,
+   "split": 0.9457364341085271
+  }
+ },
+ "seconds": 5370.887516498566,
+ "predictor": "verdict.predictor_llamacpp:VerdictLlamaCpp",
+ "kw": {
+  "gguf": "models/gguf/zs-gemma4-q8_0.gguf",
+  "bundle": "models/bundle-gemma4-zs",
+  "threads": 40
+ }
+}

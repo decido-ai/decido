@@ -1,0 +1,23 @@
+Decido 26B-A4B
+Copyright 2026 The Decido Authors
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Base model
+  google/gemma-4-26B-A4B-it — Apache License 2.0 (Google). The released GGUF is that model with a LoRA
+  fine-tune merged in and quantised to Q8_0; lora/ contains the LoRA adapter on its own.
+
+Runtime
+  tools/vserve/vserve.cpp links against llama.cpp (MIT License, ggml-org/llama.cpp).
+
+Training data provenance (train splits only; disclosed for transparency)
+  - tasksource/tasksource-jev-typed-decisions (rows tagged license_use=commercial), tasksource/procedural-typed-decisions (Apache-2.0)
+  - ZefanCai/Open-Jev, Open-Jev-v1.1 (CC0-1.0; WANLI part CC BY 4.0)
+  - MNLI (CC BY 3.0 / CC BY-SA 3.0 / MIT), SNLI (CC BY-SA 4.0), WANLI (CC BY 4.0), ANLI (CC BY-NC 4.0, Meta / FAIR)
+  - MMLU auxiliary_train (MIT), ARC (CC BY-SA 4.0), CommonsenseQA (MIT), HellaSwag (MIT), WinoGrande (CC BY 4.0), GSM8K (MIT),
+    medmcqa (Apache-2.0), AQuA-RAT (Apache-2.0), QASC / QuaRTz / CosmosQA (CC BY 4.0)
+  - MASSIVE (CC BY 4.0), banking77 (CC BY 4.0), CLINC150 (CC BY 3.0), VitaminC (CC BY-SA 3.0), BoolQ (CC BY-SA 3.0)
+  - civil_comments (CC0), go_emotions (Apache-2.0), measuring-hate-speech (CC BY 4.0), HelpSteer2 (CC BY 4.0), oasst1 (Apache-2.0)
+  - Synthetic scenarios and 30% of the soft targets from Qwen/Qwen3.8-27B (Apache-2.0)
+  - Rule-generated decision tables and compound questions (own)
+  Not used: outputs of TypeSafe Jev, outputs of Claude, any benchmark test split.
